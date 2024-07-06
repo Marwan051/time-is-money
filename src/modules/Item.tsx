@@ -12,11 +12,13 @@ interface ItemProps {
 
 const Item = ({ description, item, time, hoursPerDay }: ItemProps) => {
   let hoursRemaining = time;
-  const days = Math.floor(hoursRemaining / hoursPerDay);
-  const years = Math.floor(days / 365);
-  let remainderDays = days % 365;
-  const months = Math.floor(remainderDays / 30);
-  remainderDays %= 30;
+  const years = Math.floor(hoursRemaining / 8765);
+  hoursRemaining %= 8760;
+  const months = Math.floor(hoursRemaining / 730.5);
+  hoursRemaining %= 730.5;
+  const days = Math.floor(hoursRemaining / 24);
+  hoursRemaining %= 24;
+  const hours = hoursRemaining;
   return (
     <div className="h-full items-center justify-center flex lg:text-3xl text-xl ">
       <div className="flex flex-col h-full items-center justify-center">
