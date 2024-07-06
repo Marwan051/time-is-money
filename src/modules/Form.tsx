@@ -70,6 +70,7 @@ const Form = ({
         name="workingHours"
         id="workingHours"
         accept="number"
+        inputMode="numeric"
         value={hours}
         className="w-1/3 text-center inputbox"
         placeholder="Enter your working hours per day"
