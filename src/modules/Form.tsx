@@ -43,7 +43,7 @@ const Form = ({
 
   return (
     <form
-      className="flex flex-col w-1/2 justify-center gap-2 text-center align-middle self-center"
+      className="flex flex-col md:w-1/2 w-full justify-center gap-2 text-center align-middle self-center"
       onSubmit={(e) => handleSubmit(e)}
     >
       <label htmlFor="amount">Salary (per month)</label>

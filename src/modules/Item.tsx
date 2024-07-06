@@ -18,37 +18,37 @@ const Item = ({ description, item, time, hoursPerDay }: ItemProps) => {
   const months = Math.floor(remainderDays / 30);
   remainderDays %= 30;
   return (
-    <div className="h-full items-center justify-center flex">
+    <div className="h-full items-center justify-center flex lg:text-3xl text-xl ">
       <div className="flex flex-col h-full items-center justify-center">
         <div className="text-5xl">{getIcon(item)}</div>
-        <div className="flex flex-row text-5xl">
+        <div className="flex xl:text-5xl text-3xl flex-col">
           {years > 0 && (
             <span>
               <CountUp start={0} end={years} duration={3} />{" "}
-              <span className="text-3xl">years</span>
+              <span className="">years</span>
             </span>
           )}
           {months > 0 && (
             <span>
               <CountUp start={0} end={months} duration={3} delay={1} />{" "}
-              <span className="text-3xl">months</span>
+              <span className="">months</span>
             </span>
           )}
           {days > 0 && (
             <span>
               <CountUp start={0} end={days} duration={3} delay={2} />{" "}
-              <span className="text-3xl">days</span>
+              <span className="">days</span>
             </span>
           )}
           {hoursRemaining > 0 && (
             <span>
               <CountUp start={0} end={hoursRemaining} duration={3} delay={3} />{" "}
-              <span className="text-3xl">hours</span>
+              <span className="">hours</span>
             </span>
           )}
         </div>
-        <div className="text-3xl my-2">{Items[item]}</div>
-        <div className="text-3xl text-balance">{description}</div>
+        <div className=" my-2">{Items[item]}</div>
+        <div className=" text-balance">{description}</div>
       </div>
     </div>
   );
