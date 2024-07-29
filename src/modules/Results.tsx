@@ -14,7 +14,7 @@ const Results = ({ salaryPerHour, hoursPerDay }: ResultsProbs) => {
       <div className="md:text-4xl text-3xl">
         Salary per hour: {salaryPerHour}
         <br />
-        <i className="text-balance md:text-xl text-lg font-bold">
+        <i className="text-balance md:text-xl text-lg font-bold text-red-500">
           The Duration is the amount of time worked not regular days
         </i>
       </div>

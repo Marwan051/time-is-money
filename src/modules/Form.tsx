@@ -58,11 +58,11 @@ const Form = ({
           placeholder="Enter your salary"
           required
         />
-        <select id="dropdown" value={currency} onChange={handleOptionChange}>
+        {/* <select id="dropdown" value={currency} onChange={handleOptionChange}>
           {" "}
           <option value="1">EGP E£</option>
           <option value="2">USD $</option>
-        </select>
+        </select> */}
       </div>
       <label htmlFor="workingHours">Working Hours per day</label>
 
